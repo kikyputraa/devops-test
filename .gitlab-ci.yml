@@ -8,7 +8,6 @@ variables:
 
 before_script:
   - echo "Running job on $(hostname)"
-  - echo "Checking tools..."
   - docker --version
   - kubectl version --client=true
 
@@ -25,7 +24,6 @@ push:
   script:
     - echo "Logging in to Docker Hub..."
     - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-    - echo "Pushing image to Docker Hub..."
     - docker push $DOCKER_IMAGE
   only:
     - main
