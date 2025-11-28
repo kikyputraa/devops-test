@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels: { app: hello }
+  template:
+    metadata: { labels: { app: hello } }
+    spec:
+      containers:
+        - name: hello
+          image: kikyputraa/devops-test:latest
+          ports: [ { containerPort: 8080 } ]

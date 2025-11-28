@@ -1,0 +1,20 @@
+stages:
+  - test
+  - security
+
+test_job:
+  stage: test
+  tags:
+    - devops
+  script:
+    - echo "Running tests..."
+    - python3 -m py_compile app/main.py
+
+security_scan:
+  stage: security
+  tags:
+    - devops
+  script:
+    - echo "Running security scan..."
+    - trivy image $DH_USER/devops-test:latest
+
