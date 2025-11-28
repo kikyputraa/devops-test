@@ -60,5 +60,7 @@ Struktur folder:
 
 k8s/
  ├── deployment.yaml
+ 
  ├── service.yaml
+ 
  └── ingress.yaml
