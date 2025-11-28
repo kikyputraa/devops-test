@@ -7,7 +7,7 @@ containerization menggunakan Docker, deployment ke Kubernetes (Minikube), serta 
 
 ## 1. 📌 Aplikasi – Spesifikasi
 
-Aplikasi dibangun menggunakan Python + Flask, dengan requirement:
+Aplikasi dibangun menggunakan Python + FastAPI, dengan requirement:
 
 Endpoint: /
 
