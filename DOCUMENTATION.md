@@ -5,6 +5,23 @@
 Proyek ini adalah implementasi aplikasi sederhana “Hello World”, 
 containerization menggunakan Docker, deployment ke Kubernetes (Minikube), serta otomatisasi CI/CD menggunakan GitLab Runner (Shell Executor).
 
+Alat apa yang saja yang dipakai : 
+
+Docker
+
+Dockerfile Multi-stage build
+
+Minikube
+
+Kubernetes Deployment
+
+Nginx Ingress
+
+GitHub Actions / Jenkins / Gitlab Runner
+
+Docker Hub
+
+
 ## 0. 📌 PREPARATION (LINUX SETUP)
 1️⃣ Update Linux
 
