@@ -17,4 +17,11 @@ Header: Content-Type: application/json
 
 Port: 8080
 
-[app.py](https://github.com/kikyputraa/devops-test/blob/main/app/main.py)
+'''from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return JSONResponse(content={"msg": "Hello World"}, media_type="application/json")
