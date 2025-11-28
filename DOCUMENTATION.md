@@ -61,7 +61,63 @@ Struktur folder:
 k8s/
 
  ├── deployment.yaml
+
+```
+ apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: <YOUR_DOCKERHUB_IMAGE>
+          ports:
+            - containerPort: 8080
+```
  
  ├── service.yaml
+
+ ```
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-svc
+spec:
+  selector:
+    app: hello
+  ports:
+    - port: 80
+      targetPort: 8080
+```
  
  └── ingress.yaml
+
+ ```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - backend:
+              service:
+                name: hello-svc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+```
+
