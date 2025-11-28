@@ -419,7 +419,12 @@ deploy:
     - main
 ```
 
+## HASIL :
+
 <img width="490" height="180" alt="image" src="https://github.com/user-attachments/assets/3ff7e85d-be32-4cf5-a6df-1749d46d93dc" />
 
 <img width="761" height="287" alt="image" src="https://github.com/user-attachments/assets/a1a72afc-b34a-4c1f-b21b-1142d704bfdc" />
+
+<img width="425" height="379" alt="image" src="https://github.com/user-attachments/assets/1577c42f-c892-41c7-8452-5ca013844f84" />
+
 
