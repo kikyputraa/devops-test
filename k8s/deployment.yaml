@@ -5,11 +5,15 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels: { app: hello }
+    matchLabels:
+      app: hello
   template:
-    metadata: { labels: { app: hello } }
+    metadata:
+      labels:
+        app: hello
     spec:
       containers:
         - name: hello
-          image: kikyputraa/devops-test:latest
-          ports: [ { containerPort: 8080 } ]
+          image: IMAGE_REPLACE
+          ports:
+            - containerPort: 8080

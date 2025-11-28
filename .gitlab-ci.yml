@@ -1,23 +1,31 @@
 stages:
-  - test
-  - security
+  - build
+  - deploy
 
 variables:
-  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:latest"
+  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE/app:latest"
 
-test_job:
-  stage: test
+build_and_push:
+  stage: build
   tags:
-    - assistx   # HARUS sesuai tag runner kamu
+    - assistx
   script:
-    - echo "Running test job..."
-    - echo "Semua file terdeteksi"
-    - ls -lah
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
+    - docker build -t $DOCKER_IMAGE .
+    - docker push $DOCKER_IMAGE
+  only:
+    - main
 
-security_scan:
-  stage: security
+deploy:
+  stage: deploy
   tags:
-    - assistx   # HARUS sesuai tag runner kamu
+    - assistx
+  before_script:
+    - mkdir -p ~/.kube
+    - echo "$KUBE_CONFIG" | base64 -d > ~/.kube/config
   script:
-    - echo "Running security scan..."
-    - echo "Simulasi scan selesai"
+    - sed -i "s|IMAGE_REPLACE|$DOCKER_IMAGE|g" k8s/deployment.yaml
+    - kubectl apply -f k8s/
+  only:
+    - main
+
