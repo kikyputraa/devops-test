@@ -17,7 +17,8 @@ Header: Content-Type: application/json
 
 Port: 8080
 
-'''from fastapi import FastAPI
+```
+from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
 app = FastAPI()
@@ -25,3 +26,4 @@ app = FastAPI()
 @app.get("/")
 def root():
     return JSONResponse(content={"msg": "Hello World"}, media_type="application/json")
+```
