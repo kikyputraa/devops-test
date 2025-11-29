@@ -151,7 +151,7 @@ Akses:
 http://localhost:8081
 ```
 
-![WhatsApp Image 2025-11-28 at 19 28 27_5d02d529](https://github.com/user-attachments/assets/1d86bd5f-77d1-4583-983a-26362f4f1269)
+<img width="535" height="217" alt="image" src="https://github.com/user-attachments/assets/c52a1495-2f94-450f-bcd7-2aaf189bc628" />
 
 Setup Wizard Jenkins :
 
