@@ -131,9 +131,9 @@ Akses:
 http://localhost:8081
 ```
 
-<img width="778" height="489" alt="image" src="https://github.com/user-attachments/assets/3a1eb56d-ab0a-4968-b19e-bc0d176643ba" />
-
 ![WhatsApp Image 2025-11-28 at 19 28 27_5d02d529](https://github.com/user-attachments/assets/1d86bd5f-77d1-4583-983a-26362f4f1269)
+
+<img width="778" height="489" alt="image" src="https://github.com/user-attachments/assets/3a1eb56d-ab0a-4968-b19e-bc0d176643ba" />
 
 🔟 Install GitLab Runner
 
