@@ -468,9 +468,13 @@ deploy:
 
 <img width="490" height="180" alt="image" src="https://github.com/user-attachments/assets/3ff7e85d-be32-4cf5-a6df-1749d46d93dc" />
 
+### Pipeline Gitlab Runner
+
 <img width="761" height="287" alt="image" src="https://github.com/user-attachments/assets/a1a72afc-b34a-4c1f-b21b-1142d704bfdc" />
 
 <img width="425" height="379" alt="image" src="https://github.com/user-attachments/assets/1577c42f-c892-41c7-8452-5ca013844f84" />
+
+### Pipeline Jenkins
 
 ![WhatsApp Image 2025-12-01 at 18 56 40_1ecf36f7](https://github.com/user-attachments/assets/9bbc9353-ad67-4a44-b62f-913371a4f3b5)
 
