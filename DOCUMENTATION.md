@@ -472,4 +472,7 @@ deploy:
 
 <img width="425" height="379" alt="image" src="https://github.com/user-attachments/assets/1577c42f-c892-41c7-8452-5ca013844f84" />
 
+![WhatsApp Image 2025-12-01 at 18 56 40_1ecf36f7](https://github.com/user-attachments/assets/9bbc9353-ad67-4a44-b62f-913371a4f3b5)
+
+<img width="866" height="315" alt="image" src="https://github.com/user-attachments/assets/69590351-49aa-4d32-82c3-4ecda490cd3e" />
 
