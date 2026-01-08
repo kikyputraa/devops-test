@@ -6,13 +6,13 @@ stages:
 variables:
   DOCKER_IMAGE: "$DOCKERHUB_USERNAME/devops-test:latest"
 
-before_script:
-  - echo "Running job on $(hostname)"
-  - docker --version
-  - kubectl version --client=true
+# Gunakan image yang punya docker cli
+image: docker:latest
 
 build:
   stage: build
+  tags:
+    - assistx
   script:
     - echo "Building Docker image..."
     - docker build -t $DOCKER_IMAGE .
@@ -21,6 +21,8 @@ build:
 
 push:
   stage: push
+  tags:
+    - assistx
   script:
     - echo "Logging in to Docker Hub..."
     - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -30,10 +32,16 @@ push:
 
 deploy:
   stage: deploy
+  tags:
+    - assistx
+  before_script:
+    - apk add --no-cache curl
+    - curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    - chmod +x kubectl
+    - mv kubectl /usr/local/bin/
   script:
     - echo "Deploying to Kubernetes..."
     - kubectl apply -f k8s/
     - kubectl rollout status deployment/hello-deploy
   only:
     - main
-
